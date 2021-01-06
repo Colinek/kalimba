@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Virtual Kalimba is a Web Audio experiment by Middle Ear Media."/>
+		<meta name="keywords" content="kalimba, virtual kalimba, mbira, thumb piano, html5, javascript, jquery, web audio api, obadiah metivier, obadiah, metivier, middle ear media, middle ear, interactive"/>
+		<meta name="author" content="Obadiah Metivier"/>
+		<title>Virtual Kalimba - A Web Audio experiment by Middle Ear Media.</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+	</head>
+	<body>
+		<div id="page-wrap">
+			<h1>Virtual Kalimba</h1>
+			<div id="page-wrap">
+						<ul id="ArrangementNav">
+							<li><input type="submit" name="toggleAlternating" value="Alternating" id="toggleAlternating" title="Alternating" /></li>
+						</ul>
+		<div id="alternating" class="box">
+			<div class="backstop"> </div>
+			<div class="bridge"> </div>
+			<div id="b_tine14" class="tine"> </div>
+			<div id="b_tine11" class="tine"> </div>
+			<div id="b_tine8" class="tine"> </div>
+			<div id="b_tine5" class="tine"> </div>
+			<div id="b_tine3" class="tine"> </div>
+			<div id="b_tine1" class="tine"> </div>
+			<div id="b_tine4" class="tine"> </div>
+			<div id="b_tine7" class="tine"> </div>
+			<div id="b_tine10" class="tine"> </div>
+			<div id="b_tine12" class="tine"> </div>
+			<div id="b_tine15" class="tine"> </div>
+			<div class="zbracket"> </div>
+		</div>
+
+		<ul id="OptionsNav">
+			<li><input type="submit" name="toggleTips" value="Tips &amp; Tricks" id="toggleTips" title="Toggle Tips &amp; Tricks" /></li>
+		</ul>
+
+		<div id="controls" class="panel">
+			<p class="label"><span>Volume</span> <input id="volume-1" type="range" min="0" max="1" step="0.01" value="0.5"/></p>
+			<p class="label"><span>Pan</span> <input id="pan-1" type="range" min="-45" max="45" value="0" onchange="pan(this);"></p>
+	  	<p class="label"><span>Lowpass Frequency</span> <input id="filter-1" type="range" min="10" max="210" step="1" value="110"/></p>
+			<p class="label"><span>Lowpass Resonance</span> <input id="quality-1" type="range" min="0" max="10" step="0.1" value="5"/></p>
+			<p class="label"><span>Highpass Frequency</span> <input id="filter-2" type="range" min="10" max="1760" step="20" value="880"/></p>
+			<p class="label"><span>Highpass Resonance</span> <input id="quality-2" type="range" min="0" max="10" step="0.1" value="5"/></p>
+		</div>
+
+		<div id="tips" class="panel">
+			<h2>Tips &amp; Tricks</h2>
+			<h3>Tuning</h3>
+			<p><span class="red">Tip:</span> The Kalimba is tuned to a <strong>B minor pentatonic scale</strong>. While this does limit what can be played, it also makes it nearly impossible to play a wrong note. The B minor pentatonic scale consists of the following five notes: B, D, E, Fsharp, A. The Kalimba spans a full <strong>two octaves</strong> from B3 to B5.</p>
+			<h3>Playing</h3>
+			<p><span class="red">Tip:</span> To play the Kalimba, <strong>hover your pointer</strong> over the tines, to "pluck" them much like a real Kalimba is played. Move slowly to hear individual notes. Try swiping quickly over multiple tines in a horizontal fashion to play chords.</p>
+			<p><span class="red">Tip:</span> The Kalimba has <strong>three alternate layouts</strong>. They can be selected by clicking on the small icons near the top. Each layout offers a different arrangement of the same notes. Each corresponds to the shape of it's icon. Depending on your preference, you can arrange the notes ascending from <strong>left to right</strong>, ascending from <strong>right to left</strong>, or ascending from the <strong>center alternating</strong> to the left and right.</p>
+			<h3>Modulation</h3>
+			<p><span class="red">Tip:</span> To get that classic Kalimba <strong>sound hole modulation effect</strong>, try this. Use your mouse to strike the tines. While they are still ringing, press [<strong>A</strong>] and [<strong>S</strong>] repeatedly.</p>
+			<p><span class="red">Tip:</span> To get a <strong>stereo phased modulation effect</strong>, try this. First strike the tines. While they are still ringing, press [<strong>4</strong>] and [<strong>6</strong>] repeatedly. For a bit more subtlety with this effect, use [<strong>4</strong>] and [<strong>5</strong>], or [<strong>5</strong>] and [<strong>6</strong>].</p>
+		</div>
+
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+		<script src="app.js"></script>
+
+	</body>
+</html>
